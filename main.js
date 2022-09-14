@@ -127,7 +127,6 @@ scrollReveal.reveal(
   `#home .image, #home .text,
   #about .image, #about .text,
   #services header, #services ,
-   .construction-title ,
   #testimonials header, #testimonials .testimonials
   #contact .text, #contact .links,
   footer .brand, footer .social

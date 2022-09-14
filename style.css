@@ -25,7 +25,7 @@ img {
   /* colors */
   --hue: 198    ;
   /* HSL color mode */
-  --base-color: hsl(var(--hue) 17% 44%);
+  --base-color: hsl(var(--hue) 0% 17%);
   --base-color-second: hsl(var(--hue) 65% 88%);
   --base-color-alt: hsl(var(--hue) 57% 53%);
   --title-color: hsl(var(--hue) 41% 10%);
@@ -150,7 +150,7 @@ body {
 
 .logo img {
     width: 100%;
-    max-width: 200px;
+    max-width: 250px;
 }
 
 .logo span {
@@ -213,10 +213,24 @@ nav .menu ul {
   display: none;
 }
 
-.icon-facebook:before,
-.icon-instagram:before{
+nav .icon-whatsapp:before,
+nav .icon-instagram:before{
     color: var(--base-color);
     margin-left: 25px;
+    width: 30px;
+    height: 30px;
+}
+
+
+
+.icon-whatsapp,
+.icon-instagram {
+    width: 40px;
+}
+
+nav .social-links {
+    display: flex;
+    align-items: center;
 }
 
 /* Mostrar menu */
@@ -648,15 +662,28 @@ nav.show div.icon-close {
 /*====  FOOTER ============================ */
 footer {
   background: var(--base-color);
+  display: flex;
+  padding: 15px;
 }
 
-footer.section {
-  padding: 4rem 0;
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
 }
+
 
 footer .logo {
   display: inline-block;
   margin-bottom: 1.5rem;
+  width: 300px;
+}
+
+.logo-footer {
+    width: 100%;
+    max-width: 200px;
 }
 
 footer .brand p {
@@ -672,15 +699,22 @@ footer i {
 footer .social {
   grid-auto-flow: column;
   width: fit-content;
+  align-items: center;
 }
 
 footer .social a {
   transition: 0.3s;
   display: inline-block;
+  margin-left: 10px;
 }
 
 footer .social a:hover {
   transform: translateY(-8px);
+}
+
+.logo-dev-img {
+    width: 50px;
+    height: auto;
 }
 
 /* Back to top */
@@ -762,6 +796,10 @@ footer .social a:hover {
 
   nav .icon-menu {
     display: none;
+  }
+
+  nav .icon-whatsapp {
+    margin-right: 25px;
   }
 
   /* layout */
