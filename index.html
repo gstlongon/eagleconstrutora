@@ -23,7 +23,10 @@
     />
 
     <!-- STYLES -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" type="text" href="./css/lightbox.css">
+    <link rel="stylesheet" href="./css/lightbox.min.css">
+
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -47,7 +50,7 @@
             <li><a class="title" href="#constructions">Obras</a></li>
             <li><a class="title" href="#testimonials">Depoimentos</a></li>
             <li><a class="title" href="#contact">Contato</a></li>
-            
+            <!-- <li><a class="title" href="#login-page">Area do Cliente</a></li> -->
           </ul>
         </div>
         <!-- /menu -->
@@ -65,22 +68,79 @@
     </header>
 
     <main>
+        <div id="login-page" class="modal">
+            <div class="modal-content">
+                <a class="login-close" href="#fechar" title="Fechar" class="fechar">
+                    <div class="icon-close"></div>
+                </a>
+                <a class="logo login-logo" href="#">
+                    <img src="/assets/svg/eagle-logoblack.svg" alt="">
+                </a>
+                <form action="">
+                    <label class="login-label" for="name" id="name">Usuário:</label>
+                    <input class="login-input" type="text" name="name" id="name">
+                    <label class="login-label" for="password" id="password">Senha:</label>
+                    <input class="login-input" type="text" name="password" id="password">
+                    <button title="Entrar" class="login-button" type="submit">Entrar</button>
+                </form>
+                
+            </div>
+  
+        </div>
       <!-- HOME -->
       <section class="section" id="home">
         <div class="container grid">
             <div class="stack-slider image">
                 <div class="stack-slider__container">
-                    <div class="stack-slider__slide" data-title="Projetos Modernos">
-                        <img class="stack-slider__img" src="/assets/img/eagle-projeto1.jpeg" alt="Projeto de arquitetura">
-                    </div>
-                    <div class="stack-slider__slide" data-title="Projetos Modernos">
+                    <div class="stack-slider__slide stack-slider__slide2" onmouseover="openQrCode()" onmouseout="closeQrCode()" data-title="">
                         <img class="stack-slider__img" src="/assets/img/eagle-projeto2.jpeg" alt="Projeto de arquitetur">
+                        <img class="logo-arquiteto" src="/assets/svg/murilo-arquiteto-logo.svg" alt="">
+                        <img class="qrcode-arquiteto" src="/assets/svg/murilo-qrcode.svg" alt="">
                     </div>
-                    <div class="stack-slider__slide" data-title="Projetos Modernos">
+                    <div class="stack-slider__slide" onmouseover="openQrCode()" onmouseout="closeQrCode()" data-title="">
+                        <img class="stack-slider__img" src="/assets/img/eagle-projeto1.jpeg" alt="Projeto de arquitetura">
+                        <img class="logo-arquiteto" src="/assets/svg/murilo-arquiteto-logo.svg" alt="">
+                        <img class="qrcode-arquiteto" src="/assets/svg/murilo-qrcode.svg" alt="">
+                    </div>
+                    <div class="stack-slider__slide stack-slider__slide3" onmouseover="openQrCode()" onmouseout="closeQrCode()" data-title="">
                         <img class="stack-slider__img" src="/assets/img/eagle-projeto3.jpeg" alt="Projeto de arquitetur">
+                        <img class="logo-arquiteto" src="/assets/svg/murilo-arquiteto-logo.svg" alt="">
+                        <img class="qrcode-arquiteto" src="/assets/svg/murilo-qrcode.svg" alt="">
                     </div>
-                    <div class="stack-slider__slide" data-title="Projetos inovadores">
+                    <div class="stack-slider__slide stack-slider__slide4" onmouseover="openQrCode()" onmouseout="closeQrCode()" data-title="">
                         <img class="stack-slider__img" src="/assets/img/eagle-projeto4.jpeg" alt="Projeto de arquitetur">
+                        <img class="logo-arquiteto" src="/assets/svg/murilo-arquiteto-logo.svg" alt="">
+                        <img class="qrcode-arquiteto" src="/assets/svg/murilo-qrcode.svg" alt="">
+                    </div>
+                    <div class="stack-slider__slide stack-slider__slide5" onmouseover="openQrCode()" onmouseout="closeQrCode()" data-title="">
+                        <img class="stack-slider__img" src="/assets/img/eagle-projeto12.jpeg" alt="Projeto de arquitetur">
+                        <img class="logo-arquiteto" src="/assets/svg/murilo-arquiteto-logo.svg" alt="">
+                        <img class="qrcode-arquiteto" src="/assets/svg/murilo-qrcode.svg" alt="">
+                    </div>
+                    <div class="stack-slider__slide stack-slider__slide6" onmouseover="openQrCode()" onmouseout="closeQrCode()" data-title="">
+                        <img class="stack-slider__img" src="/assets/img/eagle-projeto6.jpg" alt="Projeto de arquitetur">
+                        <img class="logo-arquiteto" src="/assets/svg/murilo-arquiteto-logo.svg" alt="">
+                        <img class="qrcode-arquiteto" src="/assets/svg/murilo-qrcode.svg" alt="">
+                    </div>
+                    <div class="stack-slider__slide stack-slider__slide7" onmouseover="openQrCode()" onmouseout="closeQrCode()" data-title="">
+                        <img class="stack-slider__img" src="/assets/img/eagle-projeto7.jpg" alt="Projeto de arquitetur">
+                        <img class="logo-arquiteto" src="/assets/svg/murilo-arquiteto-logo.svg" alt="">
+                        <img class="qrcode-arquiteto" src="/assets/svg/murilo-qrcode.svg" alt="">
+                    </div>
+                    <div class="stack-slider__slide stack-slider__slide8" onmouseover="openQrCode()" onmouseout="closeQrCode()" data-title="">
+                        <img class="stack-slider__img" src="/assets/img/eagle-projeto8.jpg" alt="Projeto de arquitetur">
+                        <img class="logo-arquiteto" src="/assets/svg/murilo-arquiteto-logo.svg" alt="">
+                        <img class="qrcode-arquiteto" src="/assets/svg/murilo-qrcode.svg" alt="">
+                    </div>
+                    <div class="stack-slider__slide stack-slider__slide9" onmouseover="openQrCode()" onmouseout="closeQrCode()" data-title="">
+                        <img class="stack-slider__img" src="/assets/img/eagle-projeto9.jpg" alt="Projeto de arquitetur">
+                        <img class="logo-arquiteto" src="/assets/svg/murilo-arquiteto-logo.svg" alt="">
+                        <img class="qrcode-arquiteto" src="/assets/svg/murilo-qrcode.svg" alt="">
+                    </div>
+                    <div class="stack-slider__slide stack-slider__slide10" onmouseover="openQrCode()" onmouseout="closeQrCode()" data-title="">
+                        <img class="stack-slider__img" src="/assets/img/eagle-projeto10.jpg" alt="Projeto de arquitetur">
+                        <img class="logo-arquiteto" src="/assets/svg/murilo-arquiteto-logo.svg" alt="">
+                        <img class="qrcode-arquiteto" src="/assets/svg/murilo-qrcode.svg" alt="">
                     </div>
                 </div>
                 <div class="stack-slider__nav">
@@ -101,23 +161,10 @@
                 E pra você que quer investir e não sabe como, temos uma proposta pra você, só entrar em contato.
                 Nosso objetivo é trazer praticidade e agilidade pra sua obra, sempre da forma mais segura, transparente e confiável.
             </p>
-            <a class="button" href="https://api.whatsapp.com/send?phone=5514991632294&text=">Saiba mais!</a>
+            <a target="_blank" class="button" href="https://api.whatsapp.com/send?phone=5514991632294&text=">Saiba mais!</a>
           </div>
         </div>
-        <div class="stats container">
-            <div class="stat">
-              <h3>+21,235</h3>
-              <p><strong>m² Construídos</strong></p>
-            </div>
-            <div class="stat">
-              <h3>+43</h3>
-              <p><strong>Construções e Reformas</strong></p>
-            </div>
-            <div class="stat">
-              <h3>+7</h3>
-              <p><strong>Obras em Andamento</strong></p>
-            </div>
-          </div>
+        
       </section>
 
       <div class="divider-1"></div>
@@ -137,13 +184,23 @@
                 Uma Jovem construtura de uma trajetória marcada pela ousadia e realizações inovadoras, conquistamos nossa credibilidade e a sua confiança construindo residências.
                 O planejamento e a execução das obras são realizados com o mais alto padrão de qualidade e todos os cuidados necessários são tomados para deixar você completamente satisfeito, 
                 temos orgulho de proporcionar aos nossos clientes investidores a satisfação de adquirirem imóveis na planta, com a certeza e segurança de que o imóvel adquirido será entregue.
-              
-            </p>
-            <br />
-            <p>
             </p>
           </div>
         </div>
+        <div class="stats container">
+            <div class="stat">
+              <h3>+21,235</h3>
+              <p><strong>m² Construídos</strong></p>
+            </div>
+            <div class="stat">
+              <h3>+43,321</h3>
+              <p><strong>kg de Concreto e Aço usados nesse ano </strong></p>
+            </div>
+            <div class="stat">
+              <h3>+7</h3>
+              <p><strong>Obras em Andamento</strong></p>
+            </div>
+          </div>
       </section>
 
       <div class="divider-2"></div>
@@ -257,7 +314,7 @@
                     <div class="swiper-slide">
                         <div class="card">
                             <div class="service-icon">
-                                <img class="service-img" src="/assets/img/icon-config.png" alt="">
+                                <img class="service-img" src="/assets/img/icon-arquiteto.png" alt="">
                             </div>
                             <h3 class="title">Indicação de Arquitetos e Engenheiros</h3>
                             <p>
@@ -268,7 +325,7 @@
                     <div class="swiper-slide">
                         <div class="card">
                             <div class="service-icon">
-                                <img class="service-img" src="/assets/img/icon-config.png" alt="">
+                                <img class="service-img" src="/assets/img/icon-orientacao.png" alt="">
                             </div>
                             <h3 class="title">Orientação no Projeto</h3>
                             <p>
@@ -279,7 +336,7 @@
                     <div class="swiper-slide">
                         <div class="card">
                             <div class="service-icon">
-                                <img class="service-img" src="/assets/img/icon-config.png" alt="">
+                                <img class="service-img" src="/assets/img/icon-aprovacao.png" alt="">
                             </div>
                             <h3 class="title">Acompanhamento na aprovação do Projeto</h3>
                             <p>
@@ -290,7 +347,7 @@
                     <div class="swiper-slide">
                         <div class="card">
                             <div class="service-icon">
-                                <img class="service-img" src="/assets/img/icon-config.png" alt="">
+                                <img class="service-img" src="/assets/img/icon-custo.png" alt="">
                             </div>
                             <h3 class="title">Estimativa de Custos</h3>
                             <p>
@@ -301,7 +358,7 @@
                     <div class="swiper-slide">
                         <div class="card">
                             <div class="service-icon">
-                                <img class="service-img" src="/assets/img/icon-config.png" alt="">
+                                <img class="service-img" src="/assets/img/icon-maodeobra.png" alt="">
                             </div>
                             <h3 class="title">Mão de Obra</h3>
                             <p>
@@ -312,7 +369,7 @@
                     <div class="swiper-slide">
                         <div class="card">
                             <div class="service-icon">
-                                <img class="service-img" src="/assets/img/icon-config.png" alt="">
+                                <img class="service-img" src="/assets/img/icon-orcamento.png" alt="">
                             </div>
                             <h3 class="title">Indicação e Orçamento de Materiais</h3>
                             <p>
@@ -323,18 +380,18 @@
                     <div class="swiper-slide">
                         <div class="card">
                             <div class="service-icon">
-                                <img class="service-img" src="/assets/img/icon-config.png" alt="">
+                                <img class="service-img" src="/assets/img/icon-acompanhamento.png" alt="">
                             </div>
                             <h3 class="title">Acompanhamento da Obra</h3>
                             <p>
-                                O cronograma da obra sinaliza todas as etapas do projeto com datas de início e término. Assim é possível ter uma visão geral do andamento da obra - já que uma etapa depende da outra para acontecer. Semanalmente o status de cada etapa é atualizado com informação e fotos, garantindo assim acompanhamento pleno e entrega dentro do prazo estipulado.
+                                O cronograma da obra sinaliza todas as etapas do projeto com datas de início e término. Assim é possível ter uma visão geral do andamento da obra - já que uma etapa depende da outra para acontecer.
                             </p>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="card">
                             <div class="service-icon">
-                                <img class="service-img" src="/assets/img/icon-config.png" alt="">
+                                <img class="service-img" src="/assets/img/icon-fluxo.png" alt="">
                             </div>
                             <h3 class="title">Fluxo de Caixa</h3>
                             <p>
@@ -345,7 +402,7 @@
                     <div class="swiper-slide">
                         <div class="card">
                             <div class="service-icon">
-                                <img class="service-img" src="/assets/img/icon-config.png" alt="">
+                                <img class="service-img" src="/assets/img/icon-nota.png" alt="">
                             </div>
                             <h3 class="title">Controle de Notas Fiscais</h3>
                             <p>
@@ -356,7 +413,7 @@
                     <div class="swiper-slide">
                         <div class="card">
                             <div class="service-icon">
-                                <img class="service-img" src="/assets/img/icon-config.png" alt="">
+                                <img class="service-img" src="/assets/img/icon-pagamentos.png" alt="">
                             </div>
                             <h3 class="title">Pagamentos a parceiros e fornecedores</h3>
                             <p>
@@ -367,7 +424,7 @@
                     <div class="swiper-slide">
                         <div class="card">
                             <div class="service-icon">
-                                <img class="service-img" src="/assets/img/icon-config.png" alt="">
+                                <img class="service-img" src="/assets/svg/icon-prestacao.svg" alt="">
                             </div>
                             <h3 class="title">Prestação de Contas</h3>
                             <p>
@@ -378,7 +435,7 @@
                     <div class="swiper-slide">
                         <div class="card">
                             <div class="service-icon">
-                                <img class="service-img" src="/assets/img/icon-config.png" alt="">
+                                <img class="service-img" src="/assets/svg/icon-documentation.svg" alt="">
                             </div>
                             <h3 class="title">Auxilio na Documentação</h3>
                             <p>
@@ -393,215 +450,201 @@
           </div>
       </section>
       <div class="divider-1"></div>
+     
       <section class="section" id="constructions">
-            <h2 class="title construction-title">Obras em andamento</h2>
-            <div class="obras-galeria container grid">
-                <div class="container swiper">
-                    <div class="swiper-container-construction">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="construction-card">
-                                    <a href="/assets/img/obra-galeria1.jpeg" target="_blank">
-                                        <img src="/assets/img/obra-galeria1.jpeg" alt="">
-                                    </a>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, unde quis! Nemo maxime minu</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="construction-card">
-                                    <a href="/assets/img/obra-galeria2.jpeg" target="_blank">
-                                        <img src="/assets/img/obra-galeria2.jpeg" alt="">
-                                    </a>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, unde quis! Nemo maxime minu</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="construction-card">
-                                    <a href="/assets/img/obra-galeria3.jpeg" target="_blank">
-                                        <img src="/assets/img/obra-galeria3.jpeg" alt="">
-                                    </a>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, unde quis! Nemo maxime minu</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="construction-card">
-                                    <a href="/assets/img/obra-galeria4.jpeg" target="_blank">
-                                        <img src="/assets/img/obra-galeria4.jpeg" alt="">
-                                    </a>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, unde quis! Nemo maxime minu</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="construction-card">
-                                    <a href="/assets/img/obra-galeria5.jpeg" target="_blank">
-                                        <img src="/assets/img/obra-galeria5.jpeg" alt="">
-                                    </a>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, unde quis! Nemo maxime minu</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="construction-card">
-                                    <a href="/assets/img/obra-galeria6.jpeg" target="_blank">
-                                        <img src="/assets/img/obra-galeria6.jpeg" alt="">
-                                    </a>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, unde quis! Nemo maxime minu</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="construction-card">
-                                    <a href="/assets/img/obra-galeria8.jpeg" target="_blank">
-                                        <img src="/assets/img/obra-galeria8.jpeg" alt="">
-                                    </a>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, unde quis! Nemo maxime minu</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="construction-card">
-                                    <a href="/assets/img/obra-galeria9.jpeg" target="_blank">
-                                        <img src="/assets/img/obra-galeria9.jpeg" alt="">
-                                    </a>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, unde quis! Nemo maxime minu</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="construction-card">
-                                    <a href="/assets/img/obra-galeria10.jpeg" target="_blank">
-                                        <img src="/assets/img/obra-galeria10.jpeg" alt="">
-                                    </a>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, unde quis! Nemo maxime minu</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="construction-card">
-                                    <a href="/assets/img/obra-galeria11.jpeg" target="_blank">
-                                        <img src="/assets/img/obra-galeria11.jpeg" alt="">
-                                    </a>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, unde quis! Nemo maxime minu</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="construction-card">
-                                    <a href="/assets/img/obra-galeria12.jpeg" target="_blank">
-                                        <img src="/assets/img/obra-galeria12.jpeg" alt="">
-                                    </a>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, unde quis! Nemo maxime minu</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="construction-card">
-                                    <a href="/assets/img/obra-galeria13.jpeg" target="_blank">
-                                        <img src="/assets/img/obra-galeria13.jpeg" alt="">
-                                    </a>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, unde quis! Nemo maxime minu</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="construction-card">
-                                    <a href="/assets/img/obra-galeria14.jpeg" target="_blank">
-                                        <img src="/assets/img/obra-galeria14.jpeg" alt="">
-                                    </a>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, unde quis! Nemo maxime minu</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="construction-card">
-                                    <a href="/assets/img/obra-galeria15.jpeg" target="_blank">
-                                        <img src="/assets/img/obra-galeria15.jpeg" alt="">
-                                    </a>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, unde quis! Nemo maxime minu</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="construction-card">
-                                    <a href="/assets/img/obra-galeria16.jpeg" target="_blank">
-                                        <img src="/assets/img/obra-galeria16.jpeg" alt="">
-                                    </a>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, unde quis! Nemo maxime minu</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="construction-card">
-                                    <a href="/assets/img/obra-galeria17.jpeg" target="_blank">
-                                        <img src="/assets/img/obra-galeria17.jpeg" alt="">
-                                    </a>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, unde quis! Nemo maxime minu</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="construction-card">
-                                    <a href="/assets/img/obra-galeria18.jpeg" target="_blank">
-                                        <img src="/assets/img/obra-galeria18.jpeg" alt="">
-                                    </a>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, unde quis! Nemo maxime minu</p>
-                                </div>
-                            </div>
-                        </div>
-                    <!-- If we need pagination -->
-                        <div class="swiper-pagination-construction"></div>
-                    </div>
-                </div>
-            </div>
-            <h2 class="title construction-title">Obras em acabamento</h2>
+        <h2 class="title construction-title">Obras em andamento</h2>
+        <div class="obras-galeria container grid">
             <div class="container swiper">
-                <div class="swiper-container-finishing">
+                <div class="swiper-container-construction">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="construction-card">
-                                <a href="/assets/img/obra-acabamento1.jpeg" target="_blank">
-                                    <img src="/assets/img/obra-acabamento1.jpeg" alt="">
+                                <a href="/assets/img/obra-galeria19.jpeg" class="gallery__item gallery__item--1" data-lightbox="mygallery">
+                                    <img class="construction-img" src="/assets/img/obra-galeria19.jpeg" alt="">
                                 </a>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, unde quis! Nemo maxime minu</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="construction-card">
-                                <a href="/assets/img/obra-acabamento1.jpeg" target="_blank">
-                                    <img src="/assets/img/obra-acabamento1.jpeg" alt="">
+                                <a href="/assets/img/obra-galeria2.jpeg" class="gallery__item gallery__item--1" data-lightbox="mygallery">
+                                    <img class="construction-img" src="/assets/img/obra-galeria2.jpeg" alt="">
                                 </a>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, unde quis! Nemo maxime minu</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="construction-card">
-                                <a href="/assets/img/obra-acabamento6.jpeg" target="_blank">
-                                    <img src="/assets/img/obra-acabamento6.jpeg" alt="">
+                                <a href="/assets/img/obra-galeria3.jpeg" class="gallery__item gallery__item--1" data-lightbox="mygallery">
+                                    <img class="construction-img" src="/assets/img/obra-galeria3.jpeg" alt="">
                                 </a>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, unde quis! Nemo maxime minu</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="construction-card">
-                                <a href="/assets/img/obra-acabamento7.jpeg" target="_blank">
-                                    <img src="/assets/img/obra-acabamento7.jpeg" alt="">
+                                <a href="/assets/img/obra-galeria4.jpeg" class="gallery__item gallery__item--1" data-lightbox="mygallery">
+                                    <img class="construction-img" src="/assets/img/obra-galeria4.jpeg" alt="">
                                 </a>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, unde quis! Nemo maxime minu</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="construction-card">
-                                <a href="/assets/img/obra-acabamento8.jpeg" target="_blank">
-                                    <img src="/assets/img/obra-acabamento8.jpeg" alt="">
+                                <a href="/assets/img/obra-galeria5.jpeg" class="gallery__item gallery__item--1" data-lightbox="mygallery">
+                                    <img class="construction-img" src="/assets/img/obra-galeria5.jpeg" alt="">
                                 </a>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, unde quis! Nemo maxime minu</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="construction-card">
-                                <a href="/assets/img/obra-acabamento9.jpeg" target="_blank">
-                                    <img src="/assets/img/obra-acabamento9.jpeg" alt="">
+                                <a href="/assets/img/obra-galeria6.jpeg" class="gallery__item gallery__item--1" data-lightbox="mygallery">
+                                    <img class="construction-img" src="/assets/img/obra-galeria6.jpeg" alt="">
                                 </a>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, unde quis! Nemo maxime minu</p>
                             </div>
                         </div>
+                        </div>
+                        <div class="swiper-pagination-construction"></div>
+                        <button  class="construction-btn button" onclick="galleryActive()">
+                            Ver mais
+                        </button>
                     </div>
-                <!-- If we need pagination -->
-                    <div class="swiper-pagination-finishing"></div>
+                </div>
+                <div class="construction-animation">
+                    <div class="construction-gallery ">
+                        <a href="/assets/img/obra-galeria20.jpeg" class="gallery__item gallery__item--1" data-lightbox="mygallery">
+                            <img class="construction-gallery-img" src="/assets/img/obra-galeria20.jpeg" alt="">
+                        </a>
+                        <a href="/assets/img/obra-galeria19.jpeg" class="gallery__item gallery__item--1" data-lightbox="mygallery">
+                            <img class="construction-gallery-img" src="/assets/img/obra-galeria19.jpeg" alt="">
+                        </a>
+                        <a href="/assets/img/obra-galeria20.jpeg" class="gallery__item gallery__item--1" data-lightbox="mygallery">
+                            <img class="construction-gallery-img" src="/assets/img/obra-galeria16.jpeg" alt="">
+                        </a>
+                        <a href="/assets/img/obra-galeria8.jpeg" class="gallery__item gallery__item--2" data-lightbox="mygallery">
+                            <img class="construction-gallery-img" src="/assets/img/obra-galeria8.jpeg" alt="">
+                        </a>
+                        <a href="/assets/img/obra-galeria9.jpeg" class="gallery__item gallery__item--3" data-lightbox="mygallery">
+                            <img class="construction-gallery-img" src="/assets/img/obra-galeria9.jpeg" alt="">
+                        </a>
+                        <a href="/assets/img/obra-galeria10.jpeg" class="gallery__item gallery__item--4" data-lightbox="mygallery">
+                            <img class="construction-gallery-img" src="/assets/img/obra-galeria10.jpeg" alt="">
+                        </a>
+                        <a href="/assets/img/obra-galeria5.jpeg" class="gallery__item gallery__item--5" data-lightbox="mygallery">
+                            <img class="construction-gallery-img" src="/assets/img/obra-galeria11.jpeg" alt="">
+                        </a>
+                        <a href="/assets/img/obra-galeria12.jpeg" class="gallery__item gallery__item--6" data-lightbox="mygallery">
+                            <img class="construction-gallery-img" src="/assets/img/obra-galeria12.jpeg" alt="">
+                        </a>
+                        <a href="/assets/img/obra-galeria13.jpeg" class="gallery__item gallery__item--7" data-lightbox="mygallery">
+                            <img class="construction-gallery-img" src="/assets/img/obra-galeria13.jpeg" alt="">
+                        </a>
+                        <a href="/assets/img/obra-galeria14.jpeg" class="gallery__item gallery__item--8" data-lightbox="mygallery">
+                            <img class="construction-gallery-img" src="/assets/img/obra-galeria14.jpeg" alt="">
+                        </a>
+                        <a href="/assets/img/obra-galeria16.jpeg" class="gallery__item gallery__item--9" data-lightbox="mygallery">
+                            <img class="construction-gallery-img" src="/assets/img/obra-galeria16.jpeg" alt="">
+                        </a>
+                        <a href="/assets/img/obra-galeria17.jpeg" class="gallery__item gallery__item--9" data-lightbox="mygallery">
+                            <img class="construction-gallery-img" src="/assets/img/obra-galeria17.jpeg" alt="">
+                        </a>
+                        <a href="/assets/img/obra-galeria18.jpeg" class="gallery__item gallery__item--9" data-lightbox="mygallery">
+                            <img class="construction-gallery-img" src="/assets/img/obra-galeria18.jpeg" alt="">
+                        </a>
+                        <a href="/assets/img/obra-galeria19.jpeg" class="gallery__item gallery__item--9" data-lightbox="mygallery">
+                            <img class="construction-gallery-img" src="/assets/img/obra-galeria19.jpeg" alt="">
+                        </a>
+                        <a href="/assets/img/obra-galeria1.jpeg" class="gallery__item gallery__item--9" data-lightbox="mygallery">
+                            <img class="construction-gallery-img" src="/assets/img/obra-galeria1.jpeg" alt="">
+                        </a>
+                        <a href="/assets/img/obra-galeria15.jpeg" class="gallery__item gallery__item--9" data-lightbox="mygallery">
+                            <img class="construction-gallery-img" src="/assets/img/obra-galeria15.jpeg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <h2 class="title construction-title">Obras em acabamento</h2>
+                <div class="container swiper">
+                    <div class="swiper-container-finishing">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="construction-card">
+                                    <a href="/assets/img/obra-acabamento1.jpeg" class="gallery__item gallery__item--4" data-lightbox="mygallery">
+                                        <img class="construction-img" src="/assets/img/obra-acabamento1.jpeg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="construction-card">
+                                    <a href="/assets/img/obra-acabamento1.jpeg" class="gallery__item gallery__item--4" data-lightbox="mygallery">
+                                        <img class="construction-img" src="/assets/img/obra-acabamento1.jpeg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="construction-card">
+                                    <a href="/assets/img/obra-acabamento6.jpeg" class="gallery__item gallery__item--4" data-lightbox="mygallery">
+                                        <img class="construction-img" src="/assets/img/obra-acabamento6.jpeg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="construction-card">
+                                    <a href="/assets/img/obra-acabamento7.jpeg" class="gallery__item gallery__item--4" data-lightbox="mygallery">
+                                        <img class="construction-img" src="/assets/img/obra-acabamento7.jpeg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="construction-card">
+                                    <a href="/assets/img/obra-acabamento8.jpeg" class="gallery__item gallery__item--4" data-lightbox="mygallery">
+                                        <img class="construction-img" src="/assets/img/obra-acabamento8.jpeg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="construction-card">
+                                    <a href="/assets/img/obra-acabamento9.jpeg" class="gallery__item gallery__item--4" data-lightbox="mygallery">
+                                        <img class="construction-img" src="/assets/img/obra-acabamento9.jpeg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination-finishing"></div>
+                        <button  class="construction-btn-finishing button" onclick="galleryActiveFinishing()">
+                            Ver mais
+                        </button>
+                    </div>
+                </div>
+                <div class="construction-animation-finishing">
+                    <div class="construction-gallery-finishing">
+                        <a href="/assets/img/obra-acabamento1.jpeg" class="gallery__item gallery__item--1" data-lightbox="mygallery">
+                            <img class="construction-gallery-img" src="/assets/img/obra-acabamento1.jpeg" alt="">
+                        </a>
+                        <a href="/assets/img/obra-acabamento2.jpeg" class="gallery__item gallery__item--1" data-lightbox="mygallery">
+                            <img class="construction-gallery-img" src="/assets/img/obra-acabamento2.jpeg" alt="">
+                        </a>
+                        <a href="/assets/img/obra-acabamento3.jpeg" class="gallery__item gallery__item--1" data-lightbox="mygallery">
+                            <img class="construction-gallery-img" src="/assets/img/obra-acabamento3.jpeg" alt="">
+                        </a>
+                        <a href="/assets/img/obra-acabamento4.jpeg" class="gallery__item gallery__item--1" data-lightbox="mygallery">
+                            <img class="construction-gallery-img" src="/assets/img/obra-acabamento4.jpeg" alt="">
+                        </a>
+                        <a href="/assets/img/obra-acabamento5.jpeg" class="gallery__item gallery__item--1" data-lightbox="mygallery">
+                            <img class="construction-gallery-img" src="/assets/img/obra-acabamento5.jpeg" alt="">
+                        </a>
+                        <a href="/assets/img/obra-acabamento6.jpeg" class="gallery__item gallery__item--1" data-lightbox="mygallery">
+                            <img class="construction-gallery-img" src="/assets/img/obra-acabamento6.jpeg" alt="">
+                        </a>
+                        <a href="/assets/img/obra-acabamento7.jpeg" class="gallery__item gallery__item--1" data-lightbox="mygallery">
+                            <img class="construction-gallery-img" src="/assets/img/obra-acabamento7.jpeg" alt="">
+                        </a>
+                        <a href="/assets/img/obra-acabamento8.jpeg" class="gallery__item gallery__item--1" data-lightbox="mygallery">
+                            <img class="construction-gallery-img" src="/assets/img/obra-acabamento8.jpeg" alt="">
+                        </a>
+                        <a href="/assets/img/obra-acabamento9.jpeg" class="gallery__item gallery__item--1" data-lightbox="mygallery">
+                            <img class="construction-gallery-img" src="/assets/img/obra-acabamento9.jpeg" alt="">
+                        </a>
+                    </div>
                 </div>
             </div>
-
-
       </section>
-
       <div class="divider-2"></div>
 
       <!-- TESTIMONIALS -->
@@ -694,10 +737,12 @@
 
           <div class="links">
             <ul class="grid">
-                <li><img class="contact-img" src="/assets/img/logo-eagle-mobile.jpg" alt=""></li>
               <li><i class="icon-phone"></i> 14 99163-2294</li>
               <li><i class="icon-mail"></i> mail@mail.com.br</li>
             </ul>
+            <div class="contact-qrcode">
+                <img class="contact-qrcode-img" src="/assets/svg/eaglecontact-qrcode.svg" alt="">
+            </div>
           </div>
         </div>
       </section>
@@ -719,11 +764,10 @@
             <a href="https://www.facebook.com/EagleConstrutora" target="_blank">
                 <i class="icon-facebook"></i
                     ></a>
-            <a class="logo-dev" href="https://gstlongon.github.io/gustavolongon/">
+            <a class="logo-dev" href="https://gstlongon.github.io/gustavolongon/" target="_blank">
                 <img class="logo-dev-img" src="./assets/svg/logo-gstbranco.svg" alt="">
                 </a>
         </div>
-        
       </div>
     </footer>
 
@@ -738,5 +782,6 @@
     <!-- main.js -->
     <script src="main.js"></script>
     <script src="stackslider.js"></script>
+    <script src="lightbox-plus-jquery.min.js"></script>
   </body>
 </html>

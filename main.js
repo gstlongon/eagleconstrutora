@@ -1,3 +1,45 @@
+const imgExample = document.querySelector('.stack-slider__slide')
+const imgExample2 = document.querySelector('.stack-slider__slide2')
+const imgExample3 = document.querySelector('.stack-slider__slide3')
+const imgExample4 = document.querySelector('.stack-slider__slide4')
+const imgExample5 = document.querySelector('.stack-slider__slide5')
+const imgExample6 = document.querySelector('.stack-slider__slide6')
+const imgExample7 = document.querySelector('.stack-slider__slide7')
+const imgExample8 = document.querySelector('.stack-slider__slide8')
+const imgExample9 = document.querySelector('.stack-slider__slide9')
+const imgExample10 = document.querySelector('.stack-slider__slide10')
+
+
+
+function openQrCode() {
+        imgExample.classList.add('active') 
+        imgExample2.classList.add('active')
+        imgExample3.classList.add('active')
+        imgExample4.classList.add('active')
+        imgExample5.classList.add('active')
+        imgExample6.classList.add('active')
+        imgExample7.classList.add('active')
+        imgExample8.classList.add('active')
+        imgExample9.classList.add('active')
+        imgExample10.classList.add('active')
+    }
+
+function closeQrCode() {
+    imgExample.classList.remove('active')
+    imgExample2.classList.remove('active')
+    imgExample3.classList.remove('active')
+    imgExample4.classList.remove('active')
+    imgExample5.classList.remove('active')
+    imgExample6.classList.remove('active')
+    imgExample7.classList.remove('active')
+    imgExample8.classList.remove('active')
+    imgExample9.classList.remove('active')
+    imgExample10.classList.remove('active')
+
+
+    
+}
+
 /*  abre e fecha o menu quando clicar no icone: hamburguer e x */
 const nav = document.querySelector('#header nav')
 const toggle = document.querySelectorAll('nav .toggle')
@@ -119,14 +161,16 @@ const swiperService = new Swiper('.swiper-container-service', {
 const scrollReveal = ScrollReveal({
   origin: 'top',
   distance: '30px',
-  duration: 500,
+  duration: 300,
   reset: true
 })
 
 scrollReveal.reveal(
   `#home .image, #home .text,
   #about .image, #about .text,
-  #services header, #services ,
+  #services header, #services,
+ #constructions swiper-container-construction ,
+  #constructions .construction-btn ,
   #testimonials header, #testimonials .testimonials
   #contact .text, #contact .links,
   footer .brand, footer .social
@@ -176,3 +220,21 @@ window.addEventListener('scroll', function () {
   backToTop()
   activateMenuAtCurrentSection()
 })
+
+
+const openGallery = document.querySelector('.construction-btn')
+const openGalleryFinishing = document.querySelector('.construction-btn-finishing')
+const gallery = document.querySelector('.construction-gallery')
+const galleryAnimation = document.querySelector('.construction-animation')
+const galleryFinishing = document.querySelector('.construction-gallery-finishing')
+const galleryAnimationFinishing = document.querySelector('.construction-animation-finishing')
+
+function galleryActive () {
+        gallery.classList.toggle('gallery-active')
+        galleryAnimation.classList.toggle('gallery-show')
+    } 
+
+function galleryActiveFinishing () {
+    galleryFinishing.classList.toggle('gallery-active-finishing')
+    galleryAnimationFinishing.classList.toggle('gallery-show-finishing')
+} 
