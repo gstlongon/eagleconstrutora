@@ -1,4 +1,4 @@
-const imgExample = document.querySelector('.stack-slider__slide')
+const imgExample = document.querySelector('.stack-slider__slide1')
 const imgExample2 = document.querySelector('.stack-slider__slide2')
 const imgExample3 = document.querySelector('.stack-slider__slide3')
 const imgExample4 = document.querySelector('.stack-slider__slide4')
