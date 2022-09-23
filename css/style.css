@@ -342,7 +342,7 @@ img.logo-arquiteto {
     transition: 1s;
 }
 
-img.qrcode-arquiteto {
+img.instagram-arquiteto {
     max-width: 85px;
     position: absolute;
     right: 43px;
@@ -357,7 +357,7 @@ img.qrcode-arquiteto {
 }
 
 .active .logo-arquiteto,
-.active .qrcode-arquiteto {
+.active .instagram-arquiteto {
     opacity: 1;
 }
 
