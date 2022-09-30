@@ -9,8 +9,6 @@ const imgExample8 = document.querySelector('.stack-slider__slide8')
 const imgExample9 = document.querySelector('.stack-slider__slide9')
 const imgExample10 = document.querySelector('.stack-slider__slide10')
 
-
-
 function openQrCode() {
         imgExample.classList.add('active') 
         imgExample2.classList.add('active')
@@ -35,9 +33,6 @@ function closeQrCode() {
     imgExample8.classList.remove('active')
     imgExample9.classList.remove('active')
     imgExample10.classList.remove('active')
-
-
-    
 }
 
 /*  abre e fecha o menu quando clicar no icone: hamburguer e x */
@@ -96,12 +91,11 @@ const swiperService = new Swiper('.swiper-container-service', {
     },
     mousewheel: true,
     keyboard: true,
+    loop: true,
     breakpoints: {
       767: {
         slidesPerView: 2,
         setWrapperSize: true,
-    
-        
       }
     }
   })
@@ -113,12 +107,11 @@ const swiperService = new Swiper('.swiper-container-service', {
     },
     mousewheel: true,
     keyboard: true,
+    loop: true,
     breakpoints: {
       767: {
         slidesPerView: 2,
         setWrapperSize: true,
-    
-        
       }
     }
   })
@@ -159,23 +152,23 @@ const swiperService = new Swiper('.swiper-container-service', {
 
 /* ScrollReveal: Mostrar elementos quando der scroll na página */
 const scrollReveal = ScrollReveal({
-  origin: 'top',
+  origin: 'left',
   distance: '30px',
-  duration: 300,
+  duration: 999,
   reset: true
 })
 
 scrollReveal.reveal(
   `#home .image, #home .text,
-  #about .image, #about .text,
-  #services header, #services,
- #constructions swiper-container-construction ,
+  #about .image, #about .text, #about .stats ,
+  #services header, #services .service-card, #services .service-card2 ,
+ #constructions .construction-slider ,  #constructions .construction-slider2 , 
   #constructions .construction-btn ,
   #testimonials header, #testimonials .testimonials
-  #contact .text, #contact .links,
+  #contact .text, #contact .links ,
   footer .brand, footer .social
   `,
-  { interval: 100 }
+  { interval: 200 }
 )
 
 /* Botão voltar para o topo */
@@ -219,7 +212,7 @@ window.addEventListener('scroll', function () {
   changeHeaderWhenScroll()
   backToTop()
   activateMenuAtCurrentSection()
-})
+    })
 
 
 const openGallery = document.querySelector('.construction-btn')
@@ -238,3 +231,26 @@ function galleryActiveFinishing () {
     galleryFinishing.classList.toggle('gallery-active-finishing')
     galleryAnimationFinishing.classList.toggle('gallery-show-finishing')
 } 
+
+
+let valueDisplays = document.querySelectorAll(".num")
+let interval = 9999
+let about = document.getElementById("about")
+
+valueDisplays.forEach((valueDisplay) => {
+    let startValue = 0
+    let endValue = parseInt(valueDisplay.getAttribute("data-val"))
+    let duration = Math.floor(interval / endValue)
+    let counter = setInterval(function () {
+        if (window.pageYOffset >= about.offsetTop) {
+            startValue += 5
+            valueDisplay.textContent = startValue
+        }
+         if (startValue == endValue) {
+            clearInterval(counter)
+        }
+    }, duration)
+})
+
+
+  
