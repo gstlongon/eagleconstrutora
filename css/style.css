@@ -715,8 +715,6 @@ text-align: center;
 .slider-prev-icon1:hover,
 .slider-next-icon1:hover {
     transform: scale(110%);
-    background-color: #b9b9b9;
-    box-shadow: 0px 0px 10px #333;
 }
 
 .swiper-pagination-service,
