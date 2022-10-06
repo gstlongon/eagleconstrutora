@@ -650,7 +650,7 @@ text-align: center;
 }
 
 .card {
-  padding: 3.625rem 2rem;
+  padding: 3rem 2rem 10px;
   height: 100%;
   width: 100%;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
@@ -674,6 +674,33 @@ text-align: center;
     padding: 3rem 1rem;
 }
 
+.swiper-container-service,
+.swiper-container-gerenciamento {
+    position: relative;
+}
+
+.swiper-button-prev1,
+.swiper-button-prev2 {
+    position: absolute;
+    top: 44%;
+    left: 2px;
+    z-index: 5;
+    transform: rotate(180deg);
+}
+
+.swiper-button-next1,
+.swiper-button-next2 {
+    position: absolute;
+    top: 45%;
+    right: 0px;
+    z-index: 5;
+}
+
+.slider-prev-icon1,
+.slider-next-icon1 {
+    max-width: 30px;
+}
+
 .swiper-pagination-service,
 .swiper-pagination-gerenciamento {
     display: flex;
@@ -690,7 +717,8 @@ text-align: center;
 /* ---------- CONTRUCTIONS ========= */
 
 
-.construction-title {
+.construction-title,
+.construction-title2 {
     display: flex;
     justify-content: left;
     margin-top: 30px;
@@ -1143,7 +1171,8 @@ img.instagram-arquiteto {
 
   /* construction */
 
-  .construction-title {
+  .construction-title,
+  .construction-title2 {
     justify-content: center;
   }
 

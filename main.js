@@ -89,6 +89,10 @@ const swiperService = new Swiper('.swiper-container-service', {
     pagination: {
       el: '.swiper-pagination-service'
     },
+    navigation: {
+        nextEl: '.swiper-button-next1',
+        prevEl: '.swiper-button-prev1',
+      },
     mousewheel: true,
     keyboard: true,
     loop: true,
@@ -102,9 +106,13 @@ const swiperService = new Swiper('.swiper-container-service', {
 
   const swiperGerenciamento = new Swiper('.swiper-container-gerenciamento', {
     slidesPerView: 1,
-    pagination: {
-      el: '.swiper-pagination-gerenciamento'
-    },
+    navigation: {
+        nextEl: '.swiper-button-next2',
+        prevEl: '.swiper-button-prev2',
+      },
+      pagination: {
+        el: '.swiper-pagination-gerenciamento'
+      },
     mousewheel: true,
     keyboard: true,
     loop: true,
@@ -162,10 +170,10 @@ scrollReveal.reveal(
   `#home .image, #home .text,
   #about .image, #about .text, #about .stats ,
   #services header, #services .service-card, #services .service-card2 ,
- #constructions .construction-slider ,  #constructions .construction-slider2 , 
+ #constructions .construction-title ,  #constructions .construction-title2 , 
   #constructions .construction-btn ,
   #testimonials header, #testimonials .testimonials
-  #contact .text, #contact .links ,
+  #contact .text , #contact .links ,
   footer .brand, footer .social
   `,
   { interval: 200 }
@@ -234,7 +242,7 @@ function galleryActiveFinishing () {
 
 
 let valueDisplays = document.querySelectorAll(".num")
-let interval = 9999
+let interval = 5000
 let about = document.getElementById("about")
 
 valueDisplays.forEach((valueDisplay) => {
@@ -243,7 +251,7 @@ valueDisplays.forEach((valueDisplay) => {
     let duration = Math.floor(interval / endValue)
     let counter = setInterval(function () {
         if (window.pageYOffset >= about.offsetTop) {
-            startValue += 5
+            startValue += 10
             valueDisplay.textContent = startValue
         }
          if (startValue == endValue) {
