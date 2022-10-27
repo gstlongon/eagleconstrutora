@@ -95,7 +95,6 @@ const swiperService = new Swiper('.swiper-container-service', {
       },
     mousewheel: true,
     keyboard: true,
-    loop: true,
     breakpoints: {
       767: {
         slidesPerView: 2,
@@ -115,7 +114,6 @@ const swiperService = new Swiper('.swiper-container-service', {
       },
     mousewheel: true,
     keyboard: true,
-    loop: true,
     breakpoints: {
       767: {
         slidesPerView: 2,

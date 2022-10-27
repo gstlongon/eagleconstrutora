@@ -14,7 +14,7 @@ a {
 }
 
 p {
-    text-align: center;
+    text-align: left;
 }
 
 img {
@@ -263,6 +263,10 @@ nav.show .menu ul {
   display: grid;
 }
 
+nav.show .social-links {
+    display: none;
+}
+
 nav.show ul.grid {
   gap: 3rem;
 }
@@ -318,6 +322,7 @@ nav.show div.icon-close {
     transition: transform .5s, filter .5s;
     overflow: hidden;
     z-index: 0;
+
 }
 
 .stack-slider__slide--active {
@@ -359,7 +364,7 @@ img.instagram-arquiteto {
 
 
 .active .stack-slider__img {
-    filter: brightness(0.5)
+    filter: brightness(0.5);
 }
 
 .active .logo-arquiteto,
@@ -589,7 +594,8 @@ img.instagram-arquiteto {
   content: '';
   height: 100%;
   width: 100%;
-  background: var(--base-color-second);
+  background-image: url(/assets/img/obra-galeria20.jpeg);
+  background-position: center left;
   position: absolute;
   top: -8.3%;
   left: -33%;
