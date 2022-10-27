@@ -249,7 +249,7 @@ valueDisplays.forEach((valueDisplay) => {
     let duration = Math.floor(interval / endValue)
     let counter = setInterval(function () {
         if (window.pageYOffset >= about.offsetTop) {
-            startValue += 10
+            startValue += 15
             valueDisplay.textContent = startValue
         }
          if (startValue == endValue) {
